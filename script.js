@@ -75,3 +75,33 @@ const appearOnScroll = new IntersectionObserver(function(
 faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
+
+
+
+window.addEventListener("load", function () {
+  const loader = document.getElementById("loader");
+
+  // Optional delay for smoother transition
+  setTimeout(() => {
+    loader.style.opacity = "0";
+    loader.style.pointerEvents = "none";
+
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 500);
+  }, 800); // adjust delay if needed
+});
+
+
+// LOOPING SLIDESHOW
+const slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
+
+function showNextSlide() {
+  slides[currentSlide].classList.remove('active');
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].classList.add('active');
+}
+
+// Change slide every 4 seconds
+setInterval(showNextSlide, 4000);
