@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Download Jeeves</title>
 
-<style>
 
 <style>
 
@@ -13,72 +12,74 @@ body{
     margin:0;
     font-family:Arial, Helvetica, sans-serif;
     background:linear-gradient(135deg,#2c3e50,#4ca1af);
-    color:white;
 
     display:flex;
     justify-content:center;
     align-items:flex-start;
 
     min-height:100vh;
-    padding-top:12vh;
+    padding-top:60px;
 }
+
+/* Card */
 
 .container{
     text-align:center;
-    background:rgba(255,255,255,0.08);
+    background:white;
     padding:35px 30px;
-    border-radius:15px;
-    backdrop-filter: blur(10px);
-
+    border-radius:14px;
     width:90%;
     max-width:340px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
 }
+
+/* Text */
 
 h1{
     margin-bottom:10px;
+    color:#222;
 }
 
 p{
     margin-bottom:30px;
-    opacity:0.85;
+    color:#666;
 }
+
+/* Buttons */
 
 .btn{
     display:block;
     width:100%;
-    padding:16px;
+    padding:15px;
     margin:12px 0;
     border-radius:10px;
     text-decoration:none;
     font-weight:bold;
     font-size:16px;
-    transition:0.25s;
+    transition:0.2s;
 }
 
 .android{
-    background:#3DDC84;
-    color:black;
+    background:#34C759;
+    color:white;
 }
 
 .ios{
-    background:#ffffff;
-    color:black;
+    background:#000000;
+    color:white;
 }
 
 .btn:hover{
-    transform:scale(1.05);
+    transform:translateY(-2px);
 }
 
-/* Extra mobile optimization */
+/* Mobile optimization */
 
 @media (max-width:480px){
 
     body{
-        padding-top:8vh;
-    }
-
-    .container{
-        padding:30px 24px;
+        padding-top:40px;
     }
 
 }
